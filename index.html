@@ -11,6 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="photoswipe/photoswipe.css">
 </head>
 
 <body class="no-margin">
@@ -56,7 +57,7 @@
                 <div class="bio flex center">
                     <div class="flex bio-avatar">
                         <div class="flex column">
-                            <img  alt="avatar" src="podklady/logo-rysavy-truck.svg" class="avatar2">
+                            <img alt="avatar" src="podklady/logo-rysavy-truck.svg" class="avatar2">
                             <hgroup class="hgroup-bio">
                                 <h2 class="sub heading">Autodoprava</h2>
                                 <!-- <p class="text-orange text-normal clr-orange">Nákladní doprava a logistika</p> -->
@@ -88,7 +89,7 @@
                 <h2 class="with-accent heading">Naše služby</h2>
                 <div class="flex services">
                     <div class="flex column item-services padding-box bg-secondary border-style">
-                        <img class="icon light" alt="truck" src="podklady/truck-solid-white.svg" height="60">
+                        <img class="icon light" alt="truck" src="podklady/czech-republic-outline(1).svg" height="60">
                         <article class="text-normal">
                             <h3 class="heading">Vnitrostátní doprava</h3>
                             <p>Rychlé přepravy po celé České republice, expresní doručení do 24 hodin a pravidelné
@@ -96,7 +97,7 @@
                         </article>
                     </div>
                     <div class="flex column item-services padding-box bg-secondary border-style">
-                        <img class="icon light" alt="globe" src="podklady/globe-europe-solid-white.svg" height="60">
+                        <img class="icon light" alt="globe" src="podklady/globe-solid-white.svg" height="60">
                         <article class="text-normal">
                             <h3 class="heading">Mezinárodní doprava</h3>
                             <p>Kompletní zajištění přeprav do zemí EU včetně dokumentace, GPS sledování a pojištění
@@ -104,7 +105,7 @@
                         </article>
                     </div>
                     <div class="flex column item-services padding-box bg-secondary border-style">
-                        <img class="icon light" alt="warehouse" src="podklady/warehouse-solid-white.svg" height="55">
+                        <img class="icon light" alt="warehouse" src="podklady/warehouse-solid-white.svg" height="50">
                         <article class="text-normal">
                             <h3 class="heading">Skladování a logistika</h3>
                             <p>Vlastní zabezpečené sklady, kompletace zásilek, cross-docking a distribuce pro e-shopy.
@@ -190,19 +191,24 @@
         <section id="fleet" class="padding-sides-x bg-secondary">
             <div class="wrapper">
                 <h2 class="with-accent heading">Vozový park</h2>
-                <div class="grid fleet-grid">
+                <div class="grid fleet-grid pswp-gallery gallery-container" id="my-gallery">
 
                     <article class="text-normal">
-                        <img alt="cisterna" src="podklady/cisterna.jpg">
+                        <a href="podklady/cisterna.jpg" data-pswp-width="1440" data-pswp-height="882">
+                            <img alt="cisterna" src="podklady/cisterna.jpg">
+                        </a>
                         <h3 class="heading">Cisterna</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
                         <p>
-                            Objem 30 000 l, nerezová cisterna. Vhodná pro přepravu mléka, olejů a dalších tekutých potravin.
+                            Objem 30 000 l, nerezová cisterna. Vhodná pro přepravu mléka, olejů a dalších tekutých
+                            potravin.
                         </p>
                     </article>
 
                     <article class="text-normal">
-                        <img alt="tahač" src="podklady/tahac.jpg">
+                        <a href="podklady/tahac.jpg" data-pswp-width="1440" data-pswp-height="753">
+                            <img alt="tahač" src="podklady/tahac.jpg">
+                        </a>
                         <h3 class="heading">Tahač s návěsem</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
                         <p>
@@ -211,7 +217,10 @@
                     </article>
 
                     <article class="text-normal">
-                        <img alt="dummy" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
+                            data-pswp-height="360">
+                            <img alt="skříňový nákladní vůz" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        </a>
                         <h3 class="heading">Skříňový nákladní vůz</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
                         <p>
@@ -220,7 +229,10 @@
                     </article>
 
                     <article class="text-normal">
-                        <img alt="dummy" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
+                            data-pswp-height="360">
+                            <img alt="tahač s návěsem" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        </a>
                         <h3 class="heading">Tahač s návěsem</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
                         <p>
@@ -229,7 +241,10 @@
                     </article>
 
                     <article class="text-normal">
-                        <img alt="dummy" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
+                            data-pswp-height="360">
+                            <img alt="chladírenský návěs" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        </a>
                         <h3 class="heading">Chladírenský návěs</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
                         <p>
@@ -238,7 +253,10 @@
                     </article>
 
                     <article class="text-normal">
-                        <img alt="dummy" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
+                            data-pswp-height="360">
+                            <img alt="sklápěč" src="https://dummyimage.com/640x360/f7f7ff/555">
+                        </a>
                         <h3 class="heading">Sklápěč</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
                         <p>
@@ -248,8 +266,8 @@
 
                 </div>
             </div>
-
         </section>
+
 
         <section id="contact" class="padding-sides-x bg-primary">
             <div class="wrapper">
@@ -310,6 +328,16 @@
             </div>
         </div>
     </footer>
+
+    <script type="module">
+        import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('/photoswipe/photoswipe.esm.js')
+        });
+        lightbox.init();
+    </script>
 
 </body>
 
