@@ -8,9 +8,7 @@
     <title>Autodoprava Ryšavý</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="photoswipe/photoswipe.css">
     <script src="menu.js" defer></script>
 </head>
@@ -30,7 +28,7 @@
                         Včas, bezpečně a za férovou cenu – od jedné palety po kompletní kamion.
                     </span>
                 </div>
-                <img id="logo-left" alt="logo" src="podklady/logo-rysavy-cernobile.svg" height="145">
+                <img id="logo-left" class="logo" alt="logo" src="podklady/logo-rysavy-cernobile.svg">
 
                 <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
                     <span></span>
@@ -40,7 +38,7 @@
                 <div class="nav-overlay"></div>
 
                 <nav>
-                    <ul id="main-nav" class="main-nav flex no-padding">
+                    <ul id="main-nav" class="main-nav flex no-padding no-margin">
                         <li class="nav-item"><a href="#about" class="text-normal">O nás</a></li>
                         <li class="nav-item"><a href="#services" class="text-normal">Naše služby</a></li>
                         <li class="nav-item"><a href="#why-us" class="text-normal">Proč právě my</a></li>
@@ -50,7 +48,7 @@
                     </ul>
                 </nav>
             </div>
-            <img id="logo" alt="logo" src="podklady/logo-rysavy-cernobile.svg" height="145">
+            <img id="logo-right" class="logo" alt="logo" src="podklady/logo-rysavy-cernobile.svg">
         </div>
 
         <svg class="header-bg-shape">
@@ -226,8 +224,7 @@
                     </article>
 
                     <article class="text-normal">
-                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
-                            data-pswp-height="360">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640" data-pswp-height="360">
                             <img alt="skříňový nákladní vůz" src="https://dummyimage.com/640x360/f7f7ff/555">
                         </a>
                         <h3 class="heading">Skříňový nákladní vůz</h3>
@@ -238,8 +235,7 @@
                     </article>
 
                     <article class="text-normal">
-                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
-                            data-pswp-height="360">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640" data-pswp-height="360">
                             <img alt="tahač s návěsem" src="https://dummyimage.com/640x360/f7f7ff/555">
                         </a>
                         <h3 class="heading">Tahač s návěsem</h3>
@@ -250,8 +246,7 @@
                     </article>
 
                     <article class="text-normal">
-                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
-                            data-pswp-height="360">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640" data-pswp-height="360">
                             <img alt="chladírenský návěs" src="https://dummyimage.com/640x360/f7f7ff/555">
                         </a>
                         <h3 class="heading">Chladírenský návěs</h3>
@@ -262,8 +257,7 @@
                     </article>
 
                     <article class="text-normal">
-                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640"
-                            data-pswp-height="360">
+                        <a href="https://dummyimage.com/640x360/f7f7ff/555" data-pswp-width="640" data-pswp-height="360">
                             <img alt="sklápěč" src="https://dummyimage.com/640x360/f7f7ff/555">
                         </a>
                         <h3 class="heading">Sklápěč</h3>
@@ -308,12 +302,9 @@
                                 <input type="text" placeholder="Jméno a příjmení" class="box-1 padding-box">
                                 <input type="email" placeholder="E-mailová adresa" class="box-1 padding-box">
                             </div>
-                            <input type="text" placeholder="Předmět (např. poptávka přepravy)"
-                                class="box-2 padding-box">
-                            <textarea placeholder="Vaše zpráva – odkud, kam, druh a hmotnost zboží"
-                                class="box-3 padding-box"></textarea>
-                            <input type="submit" value="Odeslat zprávu"
-                                class="btn padding-box bold border-box bg-black clr-primary">
+                            <input type="text" placeholder="Předmět (např. poptávka přepravy)" class="box-2 padding-box">
+                            <textarea placeholder="Vaše zpráva – odkud, kam, druh a hmotnost zboží" class="box-3 padding-box"></textarea>
+                            <input type="submit" value="Odeslat zprávu" class="btn padding-box bold border-box bg-black clr-primary">
                         </form>
                     </div>
                 </div>
@@ -328,10 +319,8 @@
         <div class="wrapper">
             <div class="flex center footer-content">
                 <div class="flex">
-                    <a class="flex center" href="https://www.facebook.com/rysavy.autodoprava"><img alt="facebook"
-                            src="podklady/facebook-square-brands.svg" height="35"></a>
-                    <a class="flex center" href="https://www.instagram.com/autodoprava.rysavy"><img alt="instagram"
-                            src="podklady/instagram-square-brands.svg" height="35"></a>
+                    <a class="flex center" href="https://www.facebook.com/rysavy.autodoprava"><img alt="facebook" src="podklady/facebook-square-brands.svg" height="35"></a>
+                    <a class="flex center" href="https://www.instagram.com/autodoprava.rysavy"><img alt="instagram" src="podklady/instagram-square-brands.svg" height="35"></a>
                 </div>
                 <span>&copy; PCCOMP 2026</span>
             </div>
