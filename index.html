@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="photoswipe/photoswipe.css">
+    <script src="menu.js" defer></script>
 </head>
 
 <body class="no-margin">
@@ -30,8 +31,16 @@
                     </span>
                 </div>
                 <img id="logo-left" alt="logo" src="podklady/logo-rysavy-cernobile.svg" height="145">
+
+                <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-overlay"></div>
+
                 <nav>
-                    <ul class="main-nav flex no-padding">
+                    <ul id="main-nav" class="main-nav flex no-padding">
                         <li class="nav-item"><a href="#about" class="text-normal">O nás</a></li>
                         <li class="nav-item"><a href="#services" class="text-normal">Naše služby</a></li>
                         <li class="nav-item"><a href="#why-us" class="text-normal">Proč právě my</a></li>
@@ -55,15 +64,15 @@
         <div id="about" class="padding-sides-x bg-primary">
             <div class="wrapper">
                 <div class="bio flex center">
-                    <div class="flex bio-avatar">
+                    <!-- <div class="flex bio-avatar">
                         <div class="flex column">
                             <img alt="avatar" src="podklady/logo-rysavy-truck.svg" class="avatar2">
                             <hgroup class="hgroup-bio">
                                 <h2 class="sub heading">Autodoprava</h2>
-                                <!-- <p class="text-orange text-normal clr-orange">Nákladní doprava a logistika</p> -->
+                                <p class="text-orange text-normal clr-orange">Nákladní doprava a logistika</p>
                             </hgroup>
                         </div>
-                    </div>
+                    </div> -->
                     <article class="bio-article">
                         <h2 class="with-accent heading">O nás</h2>
                         <p class="text-normal">

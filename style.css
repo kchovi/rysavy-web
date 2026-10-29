@@ -1,6 +1,6 @@
 :root {
   /* --main-color: #ff9301; */
-  
+
   /* --main-color: #088645; */
   --main-color: #ff9301;
   --bg-primary: #f7f7ff;
@@ -16,7 +16,7 @@
 
   header {
     position: relative;
-    z-index: 0;
+    z-index: 10;
   }
 
   main {
@@ -194,7 +194,7 @@
 
   .header-left {
     line-height: 15%;
-    padding-top: 2vw;
+    padding-block: 1vw;
   }
 
   nav {
@@ -215,6 +215,11 @@
     text-underline-offset: 12px;
   }
 
+  .nav-toggle,
+  .nav-overlay {
+    display: none;
+  }
+
   #logo {
     align-self: center;
 
@@ -222,17 +227,15 @@
 
   #logo-left {
     display: none;
+    height: clamp(50px, calc(50px + 4vw), 160px);
   }
 
-  header img {
-    height: clamp(100px, calc(70px + 4vw), 160px);
-  }
 
-  .with-accent {
+  /* .with-accent {
     position: relative;
     display: inline-block;
     z-index: 0;
-  }
+  } */
 
   #squigly-line {
     height: 3em;
@@ -249,9 +252,9 @@
   .avatar2 {
     border-radius: 50%;
     background: var(--main-color);
-    
+
     /* background: radial-gradient(circle,var(--main-color) 58%, rgba(237, 221, 83, 1) 100%); */
-    
+
   }
 
   .dv-line {
@@ -263,10 +266,10 @@
   }
 
   .fleet-grid img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
 
   .custom-bullet {
     z-index: 0;
@@ -314,7 +317,7 @@
     width: 100%;
     height: 15em;
     border: 3px solid var(--main-color);
-    
+
     box-sizing: border-box;
   }
 
@@ -460,26 +463,110 @@
     font-size: 80%;
   }
 
+
   .header-left {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .header-left img {
-    margin-inline: auto;
+
+
+  .nav-toggle {
+    position: relative;
+    margin-left: auto;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.35em;
+    width: 2.8em;
+    height: 2.8em;
+    padding: 0.7em;
+    border: none;
+    border-radius: 0.3em;
+    background: var(--bg-primary);
+    cursor: pointer;
   }
 
+  .nav-toggle span {
+    display: block;
+    height: 3px;
+    border-radius: 2px;
+    background: #0b0b15;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(calc(0.35em + 3px)) rotate(45deg);
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(calc(-0.35em - 3px)) rotate(-45deg);
+  }
+
+  /* dimmed backdrop */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(11, 11, 21, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  /* sidebar */
   nav {
-    height: fit-content;
+    margin: 0;
+    height: auto;
   }
 
   .main-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    z-index: 20;
+    box-sizing: border-box;
+    width: min(80vw, 18em);
+    height: 100dvh;
+    padding: 8em 1.5em 1.5em;
+    flex-direction: column;
+    justify-content: flex-start;
+    line-height: normal;
+    overflow-y: auto;
+    background: var(--bg-primary);
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s;
   }
+
+  .nav-open .main-nav {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  .nav-open .nav-overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-open {
+    overflow: hidden;
+  }
+
 
   .main-nav li {
     background-color: var(--main-color);
+    background-color: rgb(from var(--main-color) r g b / 0.7);
     border-radius: 0.3em;
 
   }
@@ -490,7 +577,11 @@
     padding: 0.75em;
     color: #0b0b15;
     text-decoration: none;
+    font-size: 15px;
+   
   }
+
+
 
   .why-us,
   .bio,
@@ -533,7 +624,7 @@
 
 }
 
-/* Services: cards stack on small screens, so the shared rows are not needed */
+
 @media (max-width: 959px) {
 
   .services {
@@ -548,4 +639,3 @@
   }
 
 }
-
