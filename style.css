@@ -1,4 +1,18 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/roboto-v51-latin_latin-ext_symbols-regular.woff2") format("woff2");
+}
 
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("fonts/roboto-v51-latin_latin-ext_symbols-900.woff2") format("woff2");
+}
 @layer base, containers, bg-shapes, misc, text, utils;
 
 :root {
