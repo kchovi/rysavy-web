@@ -2,13 +2,18 @@
 <html lang="cs">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autodoprava Ryšavý – vnitrostátní a mezinárodní doprava, Choceň</title>
+    <meta name="description" content="Rodinná autodoprava z Chocně od roku 1990. Vnitrostátní a mezinárodní přeprava, potravinářské cisterny, plachtové návěsy a spedice. Nabídka do jednoho pracovního dne.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="cs_CZ">
+    <meta property="og:title" content="Autodoprava Ryšavý – Choceň">
+    <meta property="og:description" content="Rodinná autodoprava od roku 1990. Vnitrostátní a mezinárodní přeprava, cisterny, plachtové návěsy a spedice.">
     <link rel="stylesheet" href="style.css">
-    <title>Autodoprava Ryšavý</title>
     <link rel="icon" href="podklady/favicon-autodoprava-black.svg" type="image/svg+xml">
     <link rel="icon" href="podklady/favicon-autodoprava-black.ico" sizes="48x48">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="podklady/autodoprava-black-apple-touch-icon.png">
     <link rel="preload" href="fonts/roboto-v51-latin_latin-ext_symbols-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/roboto-v51-latin_latin-ext_symbols-900.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="photoswipe/photoswipe.css" media="print" onload="this.media='all'">
@@ -17,9 +22,29 @@
     </noscript>
     <script src="menu.js" defer></script>
     <script src="service-links.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Petr Ryšavý – AUTODOPRAVA, s.r.o.",
+      "identifier": "27470571",
+      "foundingDate": "1990",
+      "email": "doprava@adrysavy.cz",
+      "telephone": "+420770107100",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dvořisko 55",
+        "postalCode": "565 01",
+        "addressLocality": "Choceň",
+        "addressCountry": "CZ"
+      }
+    }
+    </script>
 </head>
 
 <body class="no-margin">
+    <a class="skip-link" href="#main">Přeskočit na obsah</a>
+
     <header class="bg-secondary">
 
         <div class="wrapper flex align-bottom">
@@ -27,14 +52,14 @@
                 <div class="header-text">
                     <hgroup>
                         <p>Spolehlivý partner na cestě</p>
-                        <h1 class="sub heading clr-orange">Mezinárodní a vnitrostátní doprava</h1>
+                        <h1 class="sub heading clr-black">Mezinárodní a vnitrostátní doprava</h1>
                     </hgroup>
                     <span class="text-normal">
                         Zajišťujeme vnitrostátní i mezinárodní přepravu zboží všech velikostí.<br>
                         Včas, bezpečně a za férovou cenu – od jedné palety po kompletní kamion.
                     </span>
                 </div>
-                <img id="logo-left" class="logo" alt="logo" src="podklady/rysavy-autodoprava-black.svg">
+                <img id="logo-left" class="logo" alt="Autodoprava Ryšavý" src="podklady/rysavy-autodoprava-black.svg" width="343" height="111">
 
                 <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
                     <span></span>
@@ -43,26 +68,27 @@
                 </button>
                 <div class="nav-overlay"></div>
 
-                <nav>
+                <nav aria-label="Hlavní menu">
                     <ul id="main-nav" class="main-nav flex no-padding no-margin">
                         <li class="nav-item"><a href="#about" class="text-normal">O nás</a></li>
                         <li class="nav-item"><a href="#services" class="text-normal">Naše služby</a></li>
                         <li class="nav-item"><a href="#history" class="text-normal">Naše historie</a></li>
                         <li class="nav-item"><a href="#fleet" class="text-normal">Vozový park</a></li>
+                        <li class="nav-item"><a href="#inquiry" class="text-normal">Poptávka</a></li>
                         <li class="nav-item"><a href="#contact" class="text-normal">Kontakt</a></li>
                     </ul>
                 </nav>
             </div>
-            <img id="logo-right" class="logo" alt="logo" src="podklady/rysavy-autodoprava-black.svg">
+            <img id="logo-right" class="logo" alt="Autodoprava Ryšavý" src="podklady/rysavy-autodoprava-black.svg" width="343" height="111">
         </div>
 
-        <svg class="header-bg-shape">
+        <svg class="header-bg-shape" aria-hidden="true">
             <circle cx="80%" cy="25%" r="90%"></circle>
         </svg>
 
     </header>
 
-    <main class="bg-primary">
+    <main id="main" class="bg-primary">
 
         <div id="about" class="padding-sides-x bg-primary">
             <div class="wrapper">
@@ -116,32 +142,32 @@
                 <h2 class="heading">Naše služby</h2>
                 <div class="flex services">
                     <div class="flex column item-services padding-box bg-secondary border-style">
-                        <img alt="globe" src="podklady/globe-solid-white.svg" height="60">
+                        <img alt="" src="podklady/globe-solid-white.svg" width="58" height="60">
                         <article class="text-normal">
                             <h3 class="heading">Mezinárodní doprava</h3>
                             <p>Kompletní zajištění přeprav do zemí EU včetně dokumentace, GPS sledování a pojištění
                                 nákladu.
-                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat spediční dispečink →</a>
+                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat dispečink →</a>
                             </p>
 
                         </article>
                     </div>
                     <div class="flex column item-services padding-box bg-secondary border-style">
-                        <img alt="truck" src="podklady/czech-republic-outline(1).svg" height="60">
+                        <img alt="" src="podklady/czech-republic-outline(1).svg" width="75" height="60">
                         <article class="text-normal">
                             <h3 class="heading">Vnitrostátní doprava</h3>
                             <p>Rychlé přepravy po celé České republice, expresní doručení do 24 hodin a pravidelné
                                 rozvozové linky.
-                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat spediční dispečink →</a>
+                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat dispečink →</a>
                             </p>
                         </article>
                     </div>
                     <div class="flex column item-services padding-box bg-secondary border-style">
-                        <img alt="warehouse" src="podklady/boxes-stacked-white.svg" height="60">
+                        <img alt="" src="podklady/boxes-stacked-white.svg" width="60" height="60">
                         <article class="text-normal">
                             <h3 class="heading">Spedice</h3>
                             <p>Přepravní kapacity pro jednorázové i pravidelné zásilky po celé Evropě. Cenovou nabídku připravíme do jednoho pracovního dne.
-                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat spediční dispečink →</a>
+                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat dispečink →</a>
                             </p>
                         </article>
                     </div>
@@ -158,7 +184,7 @@
                     <div class="flex item-history bg-primary border-style padding-box">
                         <div class="flex exp-left column dv-line">
                             <p class="no-margin">2010</p>
-                            <p class="padding-box-sm no-margin border-box bg-orange clr-primary">Obnova parku</p>
+                            <p class="padding-box-sm no-margin border-box bg-orange clr-black">Obnova parku</p>
                         </div>
                         <article>
                             <h3 class="heading">Chladírenské přepravy a obnova vozového parku</h3>
@@ -188,7 +214,7 @@
                     <div class="flex item-history bg-primary border-style padding-box">
                         <div class="flex exp-left column dv-line">
                             <p class="no-margin">2005</p>
-                            <p class="padding-box-sm no-margin border-box bg-orange clr-primary">Kogel</p>
+                            <p class="padding-box-sm no-margin border-box bg-orange clr-black">Kogel</p>
                         </div>
                         <article>
                             <h3 class="heading">Výhradní dopravce pro značku Kogel</h3>
@@ -217,7 +243,7 @@
                     <div class="flex item-history bg-primary border-style padding-box">
                         <div class="flex exp-left column dv-line">
                             <p class="no-margin">1999</p>
-                            <p class="padding-box-sm no-margin border-box bg-orange clr-primary">Cisterny</p>
+                            <p class="padding-box-sm no-margin border-box bg-orange clr-black">Cisterny</p>
                         </div>
                         <article>
                             <h3 class="heading">Potravinářské cisterny</h3>
@@ -248,7 +274,7 @@
                     <div class="flex item-history bg-primary border-style padding-box">
                         <div class="flex exp-left column dv-line">
                             <p class="no-margin">1993</p>
-                            <p class="padding-box-sm no-margin border-box bg-orange clr-primary">Export</p>
+                            <p class="padding-box-sm no-margin border-box bg-orange clr-black">Export</p>
                         </div>
                         <article>
                             <h3 class="heading">První exportní přepravy</h3>
@@ -286,7 +312,7 @@
 
                     <article class="text-normal">
                         <a href="podklady/cisterna.jpg" data-pswp-width="1440" data-pswp-height="882">
-                            <img alt="cisterna" src="podklady/cisterna.jpg">
+                            <img alt="cisterna" src="podklady/cisterna.jpg" width="1440" height="882" loading="lazy" decoding="async">
                         </a>
                         <h3 class="heading">Cisterna</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
@@ -298,7 +324,7 @@
 
                     <article class="text-normal">
                         <a href="podklady/tahac.jpg" data-pswp-width="1440" data-pswp-height="753">
-                            <img alt="tahač" src="podklady/tahac.jpg">
+                            <img alt="tahač" src="podklady/tahac.jpg" width="1440" height="753" loading="lazy" decoding="async">
                         </a>
                         <h3 class="heading">Tahač s návěsem</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
@@ -309,7 +335,7 @@
 
                     <article class="text-normal">
                         <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="skříňový nákladní vůz" src="podklady/555.png">
+                            <img alt="skříňový nákladní vůz" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
                         </a>
                         <h3 class="heading">Skříňový nákladní vůz</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
@@ -320,7 +346,7 @@
 
                     <article class="text-normal">
                         <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="tahač s návěsem" src="podklady/555.png">
+                            <img alt="tahač s návěsem" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
                         </a>
                         <h3 class="heading">Tahač s návěsem</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
@@ -331,7 +357,7 @@
 
                     <article class="text-normal">
                         <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="chladírenský návěs" src="podklady/555.png">
+                            <img alt="chladírenský návěs" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
                         </a>
                         <h3 class="heading">Chladírenský návěs</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
@@ -342,7 +368,7 @@
 
                     <article class="text-normal">
                         <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="sklápěč" src="podklady/555.png">
+                            <img alt="sklápěč" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
                         </a>
                         <h3 class="heading">Sklápěč</h3>
                         <time datetime="2024-02-27">27/02/2024</time>
@@ -364,7 +390,7 @@
                     <div class="grid">
 
                         <article class="team-card border-box border-style bg-secondary">
-                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-primary">Darina Ryšavá</h4>
+                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Darina Ryšavá</h4>
                             <p class="text-normal no-margin">Jednatelka</p>
                             <ul class="no-padding">
                                 <li class="custom-bullet email">
@@ -377,7 +403,7 @@
                         </article>
 
                         <article class="team-card border-box border-style bg-secondary">
-                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-primary">Petr Ryšavý</h4>
+                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Petr Ryšavý</h4>
                             <p class="text-normal no-margin">Jednatel</p>
                             <ul class="no-padding">
                                 <!-- <li class="custom-bullet email">
@@ -390,7 +416,7 @@
                         </article>
 
                         <article class="team-card border-box border-style bg-secondary" id="jan-hlincik">
-                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-primary">Jan Hlinčík</h4>
+                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Jan Hlinčík</h4>
                             <p class="text-normal no-margin">Dispečer a spedice</p>
                             <ul class="no-padding">
                                 <li class="custom-bullet email">
@@ -403,7 +429,7 @@
                         </article>
 
                         <article class="team-card border-box border-style bg-secondary">
-                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-primary no-margin">Milan Novák</h4>
+                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Milan Novák</h4>
                             <p class="text-normal no-margin">Dispečer vnitro</p>
                             <ul class="no-padding">
                                 <li class="custom-bullet email">
@@ -416,7 +442,7 @@
                         </article>
 
                         <article class="team-card border-box border-style bg-secondary">
-                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-primary no-margin">Iva Horáková</h4>
+                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Iva Horáková</h4>
                             <p class="text-normal no-margin">Administrativa</p>
                             <ul class="no-padding">
                                 <li class="custom-bullet email">
@@ -434,7 +460,7 @@
                     <div class="grid">
 
                         <article class="team-card border-box border-style bg-secondary">
-                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-primary no-margin">Tomáš Ehl</h4>
+                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Tomáš Ehl</h4>
                             <p class="text-normal no-margin">Hlavní kontakt a dispečer</p>
                             <ul class="no-padding">
                                 <li class="custom-bullet email">
@@ -459,7 +485,7 @@
                 <h2 class="heading">Poptávka přepravy</h2>
 
 
-                <div class="flex contact-flex padding-sides-x">
+                <div class="flex contact-flex">
                     <div class="flex column contact-item">
                         <section>
                             <h3 class="heading">Potřebujete něco převézt? Ozvěte se nám</h3>
@@ -475,27 +501,30 @@
                                 </li>
                                 <li class="custom-bullet tel">
                                     <p class="bold">+420 770 107 100</p>
-                                    <p class="bold"></p>
                                 </li>
                             </ul>
                         </section>
                     </div>
 
-                    <div class="contact-item ">
+                    <div class="contact-item">
                         <h3 class="heading">Napište nám</h3>
                         <form class="flex column">
                             <div class="flex contact-left">
-                                <input type="text" placeholder="Jméno a příjmení" class="box-1 padding-box">
-                                <input type="email" placeholder="E-mailová adresa" class="box-1 padding-box">
+                                <label class="sr-only" for="f-name">Jméno a příjmení</label>
+                                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jméno a příjmení" class="box-1 padding-box">
+                                <label class="sr-only" for="f-email">E-mailová adresa</label>
+                                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="E-mailová adresa" class="box-1 padding-box">
                             </div>
-                            <input type="text" placeholder="Předmět (např. poptávka přepravy)" class="box-2 padding-box">
-                            <textarea placeholder="Vaše zpráva – odkud, kam, druh a hmotnost zboží" class="box-3 padding-box"></textarea>
+                            <label class="sr-only" for="f-subject">Předmět</label>
+                            <input id="f-subject" name="subject" type="text" placeholder="Předmět (např. poptávka přepravy)" class="box-2 padding-box">
+                            <label class="sr-only" for="f-message">Vaše zpráva</label>
+                            <textarea id="f-message" name="message" placeholder="Vaše zpráva – odkud, kam, druh a hmotnost zboží" class="box-3 padding-box"></textarea>
                             <input type="submit" value="Odeslat zprávu" class="btn padding-box bold border-box bg-black clr-primary">
                         </form>
                     </div>
                 </div>
 
-                <iframe class="map" src="https://mapy.com/s/cukudanege" loading="lazy"></iframe>
+                <iframe class="map" title="Mapa: Dvořisko 55, Choceň" src="https://mapy.com/s/cukudanege" loading="lazy"></iframe>
             </div>
 
         </section>
@@ -561,9 +590,10 @@
         <div class="wrapper">
             <div class="flex center footer-content">
                 <div class="flex">
-                    <a class="flex center" href="https://www.facebook.com/rysavy.autodoprava"><img alt="facebook" src="podklady/facebook-square-brands.svg" height="35"></a>
-                    <a class="flex center" href="https://www.instagram.com/autodoprava.rysavy"><img alt="instagram" src="podklady/instagram-square-brands.svg" height="35"></a>
+                    <a class="flex center" href="https://www.facebook.com/rysavy.autodoprava" aria-label="Facebook – Autodoprava Ryšavý"><img alt="" src="podklady/facebook-square-brands.svg" width="31" height="35"></a>
+                    <a class="flex center" href="https://www.instagram.com/autodoprava.rysavy" aria-label="Instagram – Autodoprava Ryšavý"><img alt="" src="podklady/instagram-square-brands.svg" width="31" height="35"></a>
                 </div>
+                <a href="#company" class="text-normal">Firemní údaje</a>
                 <span>&copy; PCCOMP 2026</span>
             </div>
         </div>
