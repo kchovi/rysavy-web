@@ -55,8 +55,8 @@ html  { scroll-behavior: smooth; }
   footer  { padding-block: 1em; }
 
   :focus-visible {
-    outline: 3px solid var(--text-dark);
-    outline-offset: 2px;
+    outline: 0.1875rem solid var(--text-dark);
+    outline-offset: 0.125rem;
   }
 
   iframe:focus-visible  { outline: none; }
@@ -64,7 +64,7 @@ html  { scroll-behavior: smooth; }
 
 @layer containers {
   .wrapper {
-    max-width: 1140px;
+    max-width: 71.25rem;
     margin-inline: auto;
     padding-inline: 4vw;
   }
@@ -81,7 +81,7 @@ html  { scroll-behavior: smooth; }
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
     gap: 1em;
   }
 
@@ -139,7 +139,7 @@ html  { scroll-behavior: smooth; }
 
   .contact-item .box-1,
   .contact-item .box-2,
-  .contact-item .box-3  { border: 1px solid #bbbbbb; }
+  .contact-item .box-3  { border: 0.0625rem solid #bbbbbb; }
 
   .contact-item .box-1  { flex: 1; }
 
@@ -166,10 +166,10 @@ html  { scroll-behavior: smooth; }
     content: "";
     display: block;
     position: absolute;
-    left: -35px;
-    top: -55px;
-    width: 150px;
-    height: 150px;
+    left: -2.1875rem;
+    top: -3.4375rem;
+    width: 9.375rem;
+    height: 9.375rem;
     border-radius: 50%;
     background-color: var(--main-color);
     z-index: -1;
@@ -191,7 +191,7 @@ html  { scroll-behavior: smooth; }
 
   .logo {
     width: auto;
-    height: clamp(50px, 10vw, 130px);
+    height: clamp(3.125rem, 10vw, 8.125rem);
   }
 
   nav  { margin-top: 2vw; }
@@ -201,8 +201,8 @@ html  { scroll-behavior: smooth; }
   .nav-item a  { text-decoration: none; }
 
   .nav-item a:hover {
-    text-decoration: underline var(--main-color) solid 3px;
-    text-underline-offset: 12px;
+    text-decoration: underline var(--main-color) solid 0.1875rem;
+    text-underline-offset: 0.75rem;
   }
 
   .nav-toggle,
@@ -223,11 +223,11 @@ html  { scroll-behavior: smooth; }
   }
 
   .service-link:hover {
-    text-decoration: underline var(--main-color) solid 3px;
-    text-underline-offset: 4px;
+    text-decoration: underline var(--main-color) solid 0.1875rem;
+    text-underline-offset: 0.25rem;
   }
 
-  .dv-line  { border-right: #55555552 solid 1px; }
+  .dv-line  { border-right: #55555552 solid 0.0625rem; }
 
   .fleet-grid img {
     width: 100%;
@@ -273,12 +273,12 @@ html  { scroll-behavior: smooth; }
   }
 
   .custom-bullet a:hover {
-    text-decoration: underline var(--main-color) solid 2px;
-    text-underline-offset: 4px;
+    text-decoration: underline var(--main-color) solid 0.125rem;
+    text-underline-offset: 0.25rem;
   }
 
   header h1 {
-    text-decoration: underline var(--main-color) 4px solid;
+    text-decoration: underline var(--main-color) 0.25rem solid;
     text-underline-offset: 0.15em;
     text-decoration-skip-ink: none;
   }
@@ -306,7 +306,7 @@ html  { scroll-behavior: smooth; }
   .map {
     width: 100%;
     height: 15em;
-    border: 3px solid var(--main-color);
+    border: 0.1875rem solid var(--main-color);
     box-sizing: border-box;
   }
 }
@@ -315,7 +315,7 @@ html  { scroll-behavior: smooth; }
   .team  { padding-bottom: 2vw; }
 
   .team-heading {
-    text-decoration: underline var(--main-color) 2px solid;
+    text-decoration: underline var(--main-color) 0.125rem solid;
     text-underline-offset: 0.3em;
     margin-bottom: 1.3em;
   }
@@ -329,21 +329,22 @@ html  { scroll-behavior: smooth; }
     gap: 0.3em;
     padding: 1.25em 1.5em;
     scroll-margin-top: 2em;
+    min-height: 9.2em;
   }
 
   .team-card::before {
     left: auto;
-    right: -25px;
-    top: -25px;
+    right: -1.5625rem;
+    top: -1.5625rem;
   }
 
   .team-card::after {
     content: "";
     position: absolute;
-    top: 11px;
-    right: 11px;
-    width: 100px;
-    height: 100px;
+    top: 0.6875rem;
+    right: 0.6875rem;
+    width: 6.25rem;
+    height: 6.25rem;
     border-radius: 50%;
     background: #fff url("podklady/user-solid-dark.svg") no-repeat center / 50% auto;
     z-index: -1;
@@ -351,8 +352,8 @@ html  { scroll-behavior: smooth; }
 
   .team-card:target,
   .team-card.highlight {
-    outline: 3px solid var(--main-color);
-    outline-offset: 4px;
+    outline: 0.1875rem solid var(--main-color);
+    outline-offset: 0.25rem;
     animation: highlight-fade 0.6s ease 1s forwards;
   }
 
@@ -400,7 +401,7 @@ html  { scroll-behavior: smooth; }
 
   .company-info {
     margin: 0;
-    border-top: 1px solid #bbbbbb;
+    border-top: 0.0625rem solid #bbbbbb;
   }
 
   .company-info > div {
@@ -408,7 +409,7 @@ html  { scroll-behavior: smooth; }
     grid-template-columns: minmax(7em, 10em) 1fr;
     gap: 1em;
     padding-block: 0.9em;
-    border-bottom: 1px solid #bbbbbb;
+    border-bottom: 0.0625rem solid #bbbbbb;
   }
 
   .company-info dt,
@@ -416,7 +417,7 @@ html  { scroll-behavior: smooth; }
 
   abbr[title]  { text-decoration: none; }
 
-  @media (max-width: 749px) {
+  @media (max-width: 46.8125em) {
     .company-info > div {
       grid-template-columns: 1fr;
       gap: 0.2em;
@@ -444,8 +445,8 @@ html  { scroll-behavior: smooth; }
   }
 
   h2.heading {
-    text-decoration: underline var(--main-color) solid 3px;
-    text-underline-offset: 5px;
+    text-decoration: underline var(--main-color) solid 0.1875rem;
+    text-underline-offset: 0.3125rem;
     text-decoration-skip-ink: none;
   }
 
@@ -474,9 +475,9 @@ html  { scroll-behavior: smooth; }
 
   .sr-only {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    width: 0.0625rem;
+    height: 0.0625rem;
+    margin: -0.0625rem;
     padding: 0;
     overflow: hidden;
     clip-path: inset(50%);
@@ -485,11 +486,11 @@ html  { scroll-behavior: smooth; }
   }
 }
 
-@media (min-width: 750px) and (max-width: 1199px) {
+@media (min-width: 46.875em) and (max-width: 74.9375em) {
   html  { font-size: small; }
 }
 
-@media (max-width: 959px) {
+@media (max-width: 59.9375em) {
   .bio,
   .contact-flex  { flex-direction: column; }
 
@@ -507,14 +508,14 @@ html  { scroll-behavior: smooth; }
   .team  { padding-bottom: 4vw; }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 53.125em) {
   .header-text,
   #logo-right  { display: none; }
   #logo-left                    { display: block; }
   header .header-bg-shape       { display: none; }
 }
 
-@media (max-width: 749px) {
+@media (max-width: 46.8125em) {
   html  { font-size: 80%; }
 
   .header-left {
@@ -543,19 +544,19 @@ html  { scroll-behavior: smooth; }
 
   .nav-toggle span {
     display: block;
-    height: 3px;
-    border-radius: 2px;
+    height: 0.1875rem;
+    border-radius: 0.125rem;
     background: var(--text-dark);
     transition:
     transform 0.25s ease,
     opacity 0.2s ease;
   }
 
-  .nav-toggle[aria-expanded="true"] span:nth-child(1)  { transform: translateY(calc(0.35em + 3px)) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1)  { transform: translateY(calc(0.35em + 0.1875rem)) rotate(45deg); }
 
   .nav-toggle[aria-expanded="true"] span:nth-child(2)  { opacity: 0; }
 
-  .nav-toggle[aria-expanded="true"] span:nth-child(3)  { transform: translateY(calc(-0.35em - 3px)) rotate(-45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3)  { transform: translateY(calc(-0.35em - 0.1875rem)) rotate(-45deg); }
 
   .nav-overlay {
     display: block;
@@ -588,7 +589,7 @@ html  { scroll-behavior: smooth; }
     line-height: normal;
     overflow-y: auto;
     background: var(--bg-primary);
-    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: -0.25rem 0 1.25rem rgba(0, 0, 0, 0.2);
     transform: translateX(100%);
     visibility: hidden;
     transition:
@@ -608,7 +609,7 @@ html  { scroll-behavior: smooth; }
     padding: 0.75em;
     color: var(--text-dark);
     text-decoration: none;
-    font-size: 15px;
+    font-size: 0.9375rem;
   }
 
   .nav-open  { overflow: hidden; }
