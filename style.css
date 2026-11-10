@@ -1,18 +1,28 @@
+
 @font-face {
   font-family: "Roboto";
+
   font-style: normal;
+
   font-weight: 400;
+
   font-display: swap;
+
   src: url("fonts/roboto-v51-latin_latin-ext_symbols-regular.woff2") format("woff2");
 }
 
 @font-face {
   font-family: "Roboto";
+
   font-style: normal;
+
   font-weight: 900;
+
   font-display: swap;
+
   src: url("fonts/roboto-v51-latin_latin-ext_symbols-900.woff2") format("woff2");
 }
+
 @layer base, containers, bg-shapes, misc, text, utils;
 
 :root {
@@ -28,6 +38,12 @@
   --radius-lg: 1em;
 }
 
+html  { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html  { scroll-behavior: auto; }
+}
+
 @layer base {
   body  { font-family: "Roboto", sans-serif; }
 
@@ -36,7 +52,8 @@
     z-index: 10;
   }
 
-  main    { padding-top: 4vw; }
+  /* main    { padding-top: 4vw; } */
+
   footer  { padding-block: 1em; }
 }
 
@@ -105,7 +122,9 @@
     min-width: 0;
   }
 
-  .contact-flex  { gap: 0; }
+  .contact-flex  {
+    padding-top: 0; 
+    gap: 0; }
 
   .contact-item {
     flex: 1 0 50%;
@@ -158,8 +177,13 @@
   }
 
   #logo-right  { align-self: center; }
-  #logo-left   { display: none; }
-  .logo        { height: clamp(50px, 12vw, 145px); }
+
+  #logo-left {
+    display: none;
+    margin-block: 1vw;
+  }
+
+  .logo  { height: clamp(50px, 10vw, 130px); }
 
   nav  { margin-top: 2vw; }
 
@@ -181,6 +205,17 @@
     background-repeat: repeat-x;
     background-size: 10em;
     background-position-y: bottom;
+  }
+
+  .service-link {
+    display: block;
+    margin-top: 0.75em;
+    text-decoration: none;
+  }
+
+  .service-link:hover {
+    text-decoration: underline var(--main-color) solid 3px;
+    text-underline-offset: 4px;
   }
 
   .dv-line  { border-right: #55555552 solid 1px; }
@@ -211,14 +246,14 @@
     z-index: -1;
   }
 
-  .custom-bullet#map:before  { background-image: url("podklady/map-marker-alt-solid.svg"); }
+  .custom-bullet.map-marker:before  { background-image: url("podklady/map-marker-alt-solid.svg"); }
 
-  .custom-bullet#email:before {
+  .custom-bullet.email:before {
     left: -0.4em;
     background-image: url("podklady/envelope-regular.svg");
   }
 
-  .custom-bullet#tel:before  { background-image: url("podklady/mobile-alt-solid.svg"); }
+  .custom-bullet.tel:before  { background-image: url("podklady/mobile-alt-solid.svg"); }
 
   .btn {
     border: none;
@@ -226,11 +261,104 @@
     width: fit-content;
   }
 
+  .team  { padding-bottom: 2vw; }
+
+  .team-heading {
+    text-decoration: underline var(--main-color) 2px solid;
+    text-underline-offset: 0.3em;
+    margin-bottom: 1.3em;
+  }
+
+  .team-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding: 1.25em 1.5em;
+    scroll-margin-top: 2em;
+  }
+
+  .team-card:target,
+  .team-card.highlight {
+    outline: 3px solid var(--main-color);
+    outline-offset: 4px;
+    animation: highlight-fade 0.6s ease 1s forwards;
+  }
+
+  @keyframes highlight-fade {
+    to  { outline-color: transparent; }
+  }
+
+  .team-card .heading {
+    width:  max-content;
+    background-color: var(--main-color);
+  }
+
+  .team-card ul  { margin: 0.5em 0 0; }
+
+  /* compact version of the contact-list bullets */
+
+  .team-card .custom-bullet {
+    display: flex;
+    align-items: center;
+    min-height: 1.6em;
+    margin-block: 0.5em 0;
+    padding-left: 2.2em;
+  }
+
+  .team-card .custom-bullet p  { margin: 0; }
+
+  .team-card .custom-bullet:before {
+    top: 50%;
+    left: 0;
+    width: 1.3em;
+    height: 1.3em;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-position: center;
+  }
+
+  /* the envelope rule has left: -0.4em, so reset it in the cards */
+
+  .team-card .custom-bullet.email:before  { left: 0; }
+
+  #spedition { margin-top: 4vw;}
+
   .map {
     width: 100%;
     height: 15em;
     border: 3px solid var(--main-color);
     box-sizing: border-box;
+  }
+
+  .company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 26em), 1fr));
+    gap: 1em 3em;
+  }
+
+  .company-info {
+    margin: 0;
+    border-top: 1px solid #bbbbbb;
+  }
+
+  .company-info > div {
+    display: grid;
+    grid-template-columns: minmax(7em, 10em) 1fr;
+    gap: 1em;
+    padding-block: 0.9em;
+    border-bottom: 1px solid #bbbbbb;
+  }
+
+  .company-info dt,
+.company-info dd  { margin: 0; }
+
+  abbr[title]  { text-decoration: none; }
+
+  @media (max-width: 749px) {
+    .company-info > div {
+      grid-template-columns: 1fr;
+      gap: 0.2em;
+    }
   }
 }
 
@@ -295,6 +423,8 @@
     flex-direction: column;
     grid-row: auto;
   }
+
+  .team  { padding-bottom: 4vw; }
 }
 
 @media (max-width: 850px) {
