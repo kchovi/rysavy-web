@@ -97,8 +97,6 @@ html  { scroll-behavior: smooth; }
 
   .item-services p  { margin-top: 0; }
 
-  .item-why-us  { flex: 1; }
-
   .exp-left {
     align-self: stretch;
     flex: 0 0 9em;
@@ -177,6 +175,10 @@ html  { scroll-behavior: smooth; }
   .logo  { height: clamp(50px, 10vw, 130px); }
 
   nav  { margin-top: 2vw; }
+
+  .main-nav {
+    justify-content: unset;
+    gap: 1.5em;}
 
   .nav-item  { list-style: none; }
 
@@ -534,15 +536,9 @@ html  { scroll-behavior: smooth; }
     pointer-events: auto;
   }
 
-  .why-us,
   .item-history,
   .contact-left,
   .footer-content  { flex-direction: column; }
-
-  .item-why-us {
-    flex-direction: row;
-    justify-content: start;
-  }
 
   .item-history .dv-line  { border: none; }
 
