@@ -23,22 +23,22 @@
     <script src="menu.js" defer></script>
     <script src="service-links.js" defer></script>
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Petr Ryšavý – AUTODOPRAVA, s.r.o.",
-      "identifier": "27470571",
-      "foundingDate": "1990",
-      "email": "doprava@adrysavy.cz",
-      "telephone": "+420770107100",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Dvořisko 55",
-        "postalCode": "565 01",
-        "addressLocality": "Choceň",
-        "addressCountry": "CZ"
-      }
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Petr Ryšavý – AUTODOPRAVA, s.r.o.",
+            "identifier": "27470571",
+            "foundingDate": "1990",
+            "email": "doprava@adrysavy.cz",
+            "telephone": "+420770107100",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Dvořisko 55",
+                "postalCode": "565 01",
+                "addressLocality": "Choceň",
+                "addressCountry": "CZ"
+            }
+        }
     </script>
 </head>
 
@@ -73,7 +73,7 @@
                         <li class="nav-item"><a href="#about" class="text-normal">O nás</a></li>
                         <li class="nav-item"><a href="#services" class="text-normal">Naše služby</a></li>
                         <li class="nav-item"><a href="#history" class="text-normal">Naše historie</a></li>
-                        <li class="nav-item"><a href="#fleet" class="text-normal">Vozový park</a></li>
+                        <li class="nav-item"><a href="#gallery" class="text-normal">Galerie</a></li>
                         <li class="nav-item"><a href="#inquiry" class="text-normal">Poptávka</a></li>
                         <li class="nav-item"><a href="#contact" class="text-normal">Kontakt</a></li>
                     </ul>
@@ -147,7 +147,7 @@
                             <h3 class="heading">Mezinárodní doprava</h3>
                             <p>Kompletní zajištění přeprav do zemí EU včetně dokumentace, GPS sledování a pojištění
                                 nákladu.
-                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat dispečink →</a>
+                                <a class="bold clr-black service-link" href="#contact" data-target=".dispatch">Kontaktovat dispečink →</a>
                             </p>
 
                         </article>
@@ -158,7 +158,7 @@
                             <h3 class="heading">Vnitrostátní doprava</h3>
                             <p>Rychlé přepravy po celé České republice, expresní doručení do 24 hodin a pravidelné
                                 rozvozové linky.
-                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat dispečink →</a>
+                                <a class="bold clr-black service-link" href="#contact" data-target=".dispatch">Kontaktovat dispečink →</a>
                             </p>
                         </article>
                     </div>
@@ -167,7 +167,7 @@
                         <article class="text-normal">
                             <h3 class="heading">Spedice</h3>
                             <p>Přepravní kapacity pro jednorázové i pravidelné zásilky po celé Evropě. Cenovou nabídku připravíme do jednoho pracovního dne.
-                                <a class="bold clr-black service-link" href="#jan-hlincik">Kontaktovat dispečink →</a>
+                                <a class="bold clr-black service-link" href="#contact" data-target=".dispatch">Kontaktovat dispečink →</a>
                             </p>
                         </article>
                     </div>
@@ -305,77 +305,34 @@
             </div>
         </section>
 
-        <section id="fleet" class="padding-sides-x bg-secondary">
+        <section id="gallery" class="padding-sides-x bg-secondary">
             <div class="wrapper">
-                <h2 class="heading">Vozový park</h2>
+                <h2 class="heading">Galerie</h2>
                 <div class="grid fleet-grid" id="my-gallery">
 
-                    <article class="text-normal">
-                        <a href="podklady/cisterna.jpg" data-pswp-width="1440" data-pswp-height="882">
-                            <img alt="cisterna" src="podklady/cisterna.jpg" width="1440" height="882" loading="lazy" decoding="async">
-                        </a>
-                        <h3 class="heading">Cisterna</h3>
-                        <time datetime="2024-02-27">27/02/2024</time>
-                        <p>
-                            Objem 30 000 l, nerezová cisterna. Vhodná pro přepravu mléka, olejů a dalších tekutých
-                            potravin.
-                        </p>
-                    </article>
+                    <a href="podklady/cisterna.jpg" data-pswp-width="1440" data-pswp-height="882">
+                        <img alt="cisterna" src="podklady/cisterna.jpg" width="1440" height="882" loading="lazy" decoding="async">
+                    </a>
 
-                    <article class="text-normal">
-                        <a href="podklady/tahac.jpg" data-pswp-width="1440" data-pswp-height="753">
-                            <img alt="tahač" src="podklady/tahac.jpg" width="1440" height="753" loading="lazy" decoding="async">
-                        </a>
-                        <h3 class="heading">Tahač s návěsem</h3>
-                        <time datetime="2024-02-27">27/02/2024</time>
-                        <p>
-                            Nosnost 24 t, 33 palet. Univerzální řešení pro mezinárodní přepravu.
-                        </p>
-                    </article>
+                    <a href="podklady/tahac.jpg" data-pswp-width="1440" data-pswp-height="753">
+                        <img alt="tahač s návěsem" src="podklady/tahac.jpg" width="1440" height="753" loading="lazy" decoding="async">
+                    </a>
 
-                    <article class="text-normal">
-                        <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="skříňový nákladní vůz" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
-                        </a>
-                        <h3 class="heading">Skříňový nákladní vůz</h3>
-                        <time datetime="2024-02-27">27/02/2024</time>
-                        <p>
-                            Nosnost 12 t, 18 palet. Uzavřená nástavba chrání zboží před počasím.
-                        </p>
-                    </article>
+                    <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
+                        <img alt="skříňový nákladní vůz" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
+                    </a>
 
-                    <article class="text-normal">
-                        <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="tahač s návěsem" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
-                        </a>
-                        <h3 class="heading">Tahač s návěsem</h3>
-                        <time datetime="2024-02-27">27/02/2024</time>
-                        <p>
-                            Nosnost 24 t, 33 palet. Univerzální řešení pro mezinárodní přepravu.
-                        </p>
-                    </article>
+                    <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
+                        <img alt="tahač s návěsem" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
+                    </a>
 
-                    <article class="text-normal">
-                        <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="chladírenský návěs" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
-                        </a>
-                        <h3 class="heading">Chladírenský návěs</h3>
-                        <time datetime="2024-02-27">27/02/2024</time>
-                        <p>
-                            Řízená teplota od −25 °C do +25 °C pro potraviny a farmacii.
-                        </p>
-                    </article>
+                    <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
+                        <img alt="chladírenský návěs" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
+                    </a>
 
-                    <article class="text-normal">
-                        <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
-                            <img alt="sklápěč" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
-                        </a>
-                        <h3 class="heading">Sklápěč</h3>
-                        <time datetime="2024-02-27">27/02/2024</time>
-                        <p>
-                            Nosnost 18 t. Přeprava sypkých materiálů, zeminy a štěrku.
-                        </p>
-                    </article>
+                    <a href="podklady/555.png" data-pswp-width="640" data-pswp-height="360">
+                        <img alt="sklápěč" src="podklady/555.png" width="640" height="360" loading="lazy" decoding="async">
+                    </a>
 
                 </div>
             </div>
@@ -390,19 +347,6 @@
                     <div class="grid">
 
                         <article class="team-card border-box border-style bg-secondary top-cornr-circ">
-                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Darina Ryšavá</h4>
-                            <p class="text-normal no-margin">Jednatelka</p>
-                            <ul class="no-padding">
-                                <li class="custom-bullet email">
-                                    <p class="bold"><a href="mailto:darina.rysava@adrysavy.cz">darina.rysava@adrysavy.cz</a></p>
-                                </li>
-                                <li class="custom-bullet tel">
-                                    <p class="bold"><a href="tel:+420601365748">+420 601 365 748</a></p>
-                                </li>
-                            </ul>
-                        </article>
-
-                        <article class="team-card border-box border-style bg-secondary top-cornr-circ">
                             <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Petr Ryšavý</h4>
                             <p class="text-normal no-margin">Jednatel</p>
                             <ul class="no-padding">
@@ -415,7 +359,20 @@
                             </ul>
                         </article>
 
-                        <article class="team-card border-box border-style bg-secondary top-cornr-circ" id="jan-hlincik">
+                        <article class="team-card border-box border-style bg-secondary top-cornr-circ">
+                            <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Darina Ryšavá</h4>
+                            <p class="text-normal no-margin">Jednatelka</p>
+                            <ul class="no-padding">
+                                <li class="custom-bullet email">
+                                    <p class="bold"><a href="mailto:darina.rysava@adrysavy.cz">darina.rysava@adrysavy.cz</a></p>
+                                </li>
+                                <li class="custom-bullet tel">
+                                    <p class="bold"><a href="tel:+420601365748">+420 601 365 748</a></p>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="team-card border-box border-style bg-secondary top-cornr-circ dispatch">
                             <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Jan Hlinčík</h4>
                             <p class="text-normal no-margin">Dispečer a spedice</p>
                             <ul class="no-padding">
@@ -423,7 +380,7 @@
                                     <p class="bold"><a href="mailto:doprava@adrysavy.cz">doprava@adrysavy.cz</a></p>
                                 </li>
                                 <li class="custom-bullet tel">
-                                    <p class="bold"><a href="tel:+420770107100">+420 770 107 100</a> / <a href="tel:+420739339688">739 339 688</a></p>
+                                    <p class="bold"><a href="tel:+420770107100">+420 770 107 100</a></p>
                                 </li>
                             </ul>
                         </article>
@@ -441,7 +398,7 @@
                             </ul>
                         </article>
 
-                        <article class="team-card border-box border-style bg-secondary top-cornr-circ">
+                        <article class="team-card border-box border-style bg-secondary top-cornr-circ dispatch">
                             <h4 class="heading padding-box-sm no-margin border-box bg-orange clr-black">Iva Horáková</h4>
                             <p class="text-normal no-margin">Administrativa</p>
                             <ul class="no-padding">
