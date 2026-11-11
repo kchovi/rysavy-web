@@ -1,0 +1,35 @@
+name: Deploy via FTP
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (list changes, upload nothing)"
+        type: boolean
+        default: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Upload to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps          # ftp | ftps | ftps-legacy
+          port: 21
+          local-dir: ./           # use ./dist/ if you build first
+          server-dir: /home/adrys/public_html/www/       # remote target directory, keep trailing slash
+          dry-run: ${{ inputs.dry_run }}
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
+            README.md
+            
