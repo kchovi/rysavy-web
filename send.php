@@ -2,7 +2,7 @@
 declare(strict_types=1);
 header('Content-Type: application/json; charset=utf-8');
 
-const TO   = 'chovanec@pccomp.eu';
+const TO   = 'doprava@adrysavy.cz';
 const FROM = 'web@adrysavy.cz';  
 
 function respond(bool $ok, string $msg, int $code = 200): never {
