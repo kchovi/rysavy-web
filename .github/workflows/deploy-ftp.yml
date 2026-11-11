@@ -24,7 +24,7 @@ jobs:
           protocol: ftps          # ftp | ftps | ftps-legacy
           port: 21
           local-dir: ./           # use ./dist/ if you build first
-          server-dir: /home/adrys/public_html/www/       # remote target directory, keep trailing slash
+          server-dir: /www/       # remote target directory, keep trailing slash
           dry-run: ${{ inputs.dry_run }}
           exclude: |
             **/.git*
