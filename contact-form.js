@@ -1,9 +1,12 @@
-const form = document.getElementById('contact-form');
-const statusEl = document.getElementById('form-status');
+const STATUS_CLASSES = {
+    loading: 'bg-gray clr-primary',
+    success: 'bg-orange clr-black',
+    error:   'bg-black clr-primary'
+};
 
 function setStatus(text, type) {
     statusEl.textContent = text;
-    statusEl.className = type ? 'form-status ' + type : 'form-status';
+    statusEl.className = 'form-status padding-box-sm border-box bold ' + (STATUS_CLASSES[type] || '');
 }
 
 form?.addEventListener('submit', async (e) => {
