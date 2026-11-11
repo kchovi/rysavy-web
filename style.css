@@ -311,8 +311,11 @@ html  { scroll-behavior: smooth; }
   }
 
   .form-status {
-    margin: 1rem 0 0;
-    min-height: 3.5rem;     
+    margin: 0.75rem 0 0;
+    min-height: 2.25rem;        /* bylo 3.5rem */
+    padding: 0.35rem 0.75rem;   /* přebije padding-box-sm */
+    font-size: 0.9rem;
+    line-height: 1.2;
     display: flex;
     align-items: center;
     opacity: 0;

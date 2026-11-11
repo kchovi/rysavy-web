@@ -22,7 +22,7 @@
     function setStatus(text, type, autoHideMs = 0) {
         clearTimeout(hideTimer);
         statusEl.textContent = text;
-        statusEl.className = 'form-status padding-box-sm border-box bold ' +
+        statusEl.className = 'form-status border-box bold ' +
             (STATUS_CLASSES[type] || '') + ' is-visible';
         if (autoHideMs) hideTimer = setTimeout(hideStatus, autoHideMs);
     }
