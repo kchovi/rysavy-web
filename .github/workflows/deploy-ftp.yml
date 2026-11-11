@@ -21,7 +21,7 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps          # ftp | ftps | ftps-legacy
+          protocol: ftp          # ftp | ftps | ftps-legacy
           port: 21
           local-dir: ./           # use ./dist/ if you build first
           server-dir: /public_html/www/      # remote target directory, keep trailing slash
