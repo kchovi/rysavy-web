@@ -22,6 +22,7 @@
     </noscript>
     <script src="menu.js" defer></script>
     <script src="service-links.js" defer></script>
+    <script src="contact-form.js" defer></script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -37,7 +38,29 @@
                 "postalCode": "565 01",
                 "addressLocality": "Choceň",
                 "addressCountry": "CZ"
-            }
+            },
+            "openingHoursSpecification": [{
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                    ],
+                    "opens": "08:00",
+                    "closes": "18:00"
+                },
+                {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Saturday",
+                        "Sunday"
+                    ],
+                    "opens": "00:00",
+                    "closes": "00:00"
+                }
+            ]
         }
     </script>
 </head>
@@ -464,18 +487,25 @@
 
                     <div class="contact-item">
                         <h3 class="heading">Napište nám</h3>
-                        <form class="flex column">
+                        <form id="contact-form" class="flex column" action="send.php" method="post">
                             <div class="flex contact-left">
                                 <label class="sr-only" for="f-name">Jméno a příjmení</label>
-                                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jméno a příjmení" class="box-1 padding-box">
+                                <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Jméno a příjmení" class="box-1 padding-box" required maxlength="100">
                                 <label class="sr-only" for="f-email">E-mailová adresa</label>
-                                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="E-mailová adresa" class="box-1 padding-box">
+                                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="E-mailová adresa" class="box-1 padding-box" required maxlength="150">
                             </div>
                             <label class="sr-only" for="f-subject">Předmět</label>
-                            <input id="f-subject" name="subject" type="text" placeholder="Předmět (např. poptávka přepravy)" class="box-2 padding-box">
+                            <input id="f-subject" name="subject" type="text" placeholder="Předmět (např. poptávka přepravy)" class="box-2 padding-box" maxlength="150">
                             <label class="sr-only" for="f-message">Vaše zpráva</label>
-                            <textarea id="f-message" name="message" placeholder="Vaše zpráva – odkud, kam, druh a hmotnost zboží" class="box-3 padding-box"></textarea>
+                            <textarea id="f-message" name="message" placeholder="Vaše zpráva – odkud, kam, druh a hmotnost zboží" class="box-3 padding-box" required maxlength="5000"></textarea>
+
+                            <!-- honeypot -->
+                            <div style="position:absolute;left:-9999px" aria-hidden="true">
+                                <label>Web <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                            </div>
+
                             <input type="submit" value="Odeslat zprávu" class="btn padding-box bold border-box bg-black clr-primary">
+                            <p id="form-status" role="status" aria-live="polite"></p>
                         </form>
                     </div>
                 </div>
