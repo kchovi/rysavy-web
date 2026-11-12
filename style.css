@@ -208,6 +208,37 @@ html  { scroll-behavior: smooth; }
   .nav-toggle,
   .nav-overlay  { display: none; }
 
+  .lang-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+  }
+
+  .lang-link svg {
+    display: block;
+    width: 27px;
+    height: 18px;
+    flex: none;
+  }
+
+
+  .nav-item a.lang-link:hover  { text-decoration: none; }
+
+  .lang-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 3px;
+    background: var(--main-color);
+    opacity: 0;
+  }
+
+  .lang-link:hover::after,
+.lang-link:focus-visible::after  { opacity: 1; }
+
   #squigly-line {
     height: 3em;
     background-image: url("podklady/border-dark.png");

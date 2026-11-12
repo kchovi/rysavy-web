@@ -3,6 +3,23 @@
     const statusEl = document.getElementById('form-status');
     if (!form || !statusEl) return;
 
+    
+    const lang = (document.documentElement.lang || 'cs').slice(0, 2).toLowerCase();
+
+    const MESSAGES = {
+        cs: {
+            sending: 'Odesílám…',
+            connection: 'Chyba připojení, zkuste to prosím znovu.',
+            fallback: 'Něco se nepovedlo, zkuste to prosím znovu.'
+        },
+        en: {
+            sending: 'Sending…',
+            connection: 'Connection error, please try again.',
+            fallback: 'Something went wrong, please try again.'
+        }
+    };
+    const t = MESSAGES[lang] || MESSAGES.cs;
+
     const STATUS_CLASSES = {
         loading: 'bg-gray clr-primary',
         success: 'bg-orange clr-black',
@@ -12,8 +29,8 @@
     let hideTimer;
 
     function hideStatus() {
-        statusEl.classList.remove('is-visible'); // fade out
-        hideTimer = setTimeout(() => { // then clean up
+        statusEl.classList.remove('is-visible'); 
+        hideTimer = setTimeout(() => { 
             statusEl.textContent = '';
             statusEl.className = 'form-status';
         }, 300);
@@ -31,17 +48,19 @@
         e.preventDefault();
         const btn = form.querySelector('[type=submit]');
         btn.disabled = true;
-        setStatus('Odesílám…', 'loading'); // stays until the request finishes
+        setStatus(t.sending, 'loading'); 
         try {
+            const body = new FormData(form);
+            body.append('lang', lang); 
             const res = await fetch(form.action, {
                 method: 'POST',
-                body: new FormData(form)
+                body
             });
             const data = await res.json();
-            setStatus(data.message, data.ok ? 'success' : 'error', data.ok ? 6000 : 10000);
+            setStatus(data.message || t.fallback, data.ok ? 'success' : 'error', data.ok ? 6000 : 10000);
             if (data.ok) form.reset();
         } catch {
-            setStatus('Chyba připojení, zkuste to prosím znovu.', 'error', 10000);
+            setStatus(t.connection, 'error', 10000);
         } finally {
             btn.disabled = false;
         }
