@@ -661,6 +661,15 @@ html  { scroll-behavior: smooth; }
     font-size: 15px;
   }
 
+  .main-nav a.lang-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+  }
+
+  .main-nav a.lang-link::after  { display: none; }
+
   .nav-open  { overflow: hidden; }
 
   .nav-open .main-nav {
