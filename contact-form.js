@@ -22,8 +22,8 @@
 
     const STATUS_CLASSES = {
         loading: 'bg-gray clr-primary',
-        success: 'bg-orange clr-black',
-        error: 'bg-black clr-primary'
+        success: 'bg-black clr-black',
+        error: 'bg-red clr-primary'
     };
 
     let hideTimer;

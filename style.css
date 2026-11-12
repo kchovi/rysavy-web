@@ -222,7 +222,6 @@ html  { scroll-behavior: smooth; }
     flex: none;
   }
 
-
   .nav-item a.lang-link:hover  { text-decoration: none; }
 
   .lang-link::after {
@@ -513,11 +512,12 @@ html  { scroll-behavior: smooth; }
   .border-style  { border-radius: var(--radius-lg); }
 
   .clr-black    { color: var(--text-dark); }
-  .clr-orange   { color: var(--main-color); }
+  .clr-main     { color: var(--main-color); }
   .clr-primary  { color: var(--text-light); }
 
-  .bg-orange     { background: var(--main-color); }
+  .bg-main       { background: var(--main-color); }
   .bg-black      { background: var(--text-dark); }
+  .bg-red        { background-color: red; }
   .bg-gray       { background: var(--text-muted); }
   .bg-primary    { background: var(--bg-primary); }
   .bg-secondary  { background: var(--bg-secondary); }

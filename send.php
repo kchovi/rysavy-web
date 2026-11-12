@@ -5,7 +5,7 @@ header('Content-Type: application/json; charset=utf-8');
 const TO   = 'doprava@adrysavy.cz';
 const FROM = 'web@adrysavy.cz';
 
-// Reply language: sent by contact-form.js, whitelisted so nothing else gets through
+
 $lang = (($_POST['lang'] ?? 'cs') === 'en') ? 'en' : 'cs';
 
 const MESSAGES = [
