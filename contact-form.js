@@ -21,7 +21,7 @@
 
     const STATUS_CLASSES = {
         loading: 'bg-gray clr-primary',
-        success: 'bg-black clr-black',
+        success: 'bg-black clr-primary',
         error: 'bg-red clr-primary'
     };
 
