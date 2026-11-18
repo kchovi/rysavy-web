@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
+session_start();
 header('Content-Type: application/json; charset=utf-8');
 
 const TO = 'darina.rysava@adrysavy.cz';
 const FROM = 'web@adrysavy.cz';
-
 
 $lang = (($_POST['lang'] ?? 'cs') === 'en') ? 'en' : 'cs';
 
@@ -14,6 +14,7 @@ const MESSAGES = [
         'honeypot' => 'Zpráva odeslána.',
         'invalid' => 'Vyplňte prosím jméno, platný e-mail a zprávu.',
         'too_long' => 'Zpráva je příliš dlouhá.',
+        'captcha' => 'Kód z obrázku je nesprávný, zkuste to prosím znovu.',
         'ok' => 'Děkujeme, zpráva byla odeslána.',
         'fail' => 'Odeslání se nezdařilo, zkuste to prosím později nebo nám zavolejte.',
     ],
@@ -22,6 +23,7 @@ const MESSAGES = [
         'honeypot' => 'Message sent.',
         'invalid' => 'Please enter your name, a valid email address and a message.',
         'too_long' => 'The message is too long.',
+        'captcha' => 'The code from the image is incorrect, please try again.',
         'ok' => 'Thank you, your message has been sent.',
         'fail' => 'Sending failed, please try again later or give us a call.',
     ],
@@ -57,6 +59,19 @@ if (mb_strlen($name) > 100 || mb_strlen($subject) > 150 || mb_strlen($message) >
     respond(false, $m['too_long'], 422);
 }
 
+// captcha (Securimage)
+require_once __DIR__ . '/securimage/securimage.php';
+$securimage = new Securimage();
+$captchaOk = $securimage->check((string) ($_POST['captcha'] ?? ''));
+// make the code single-use 
+$_SESSION['securimage_code_value'] = [];
+$_SESSION['securimage_code_disp']  = [];
+$_SESSION['securimage_code_ctime'] = [];
+$_SESSION['securimage_code_audio'] = [];
+
+if (!$captchaOk) {
+    respond(false, $m['captcha'], 422);
+}
 
 $body = "Jméno: $name\nE-mail: $email\n\n$message\n";
 

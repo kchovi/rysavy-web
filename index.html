@@ -517,6 +517,14 @@
                             <label class="sr-only" for="f-message">Vaše zpráva</label>
                             <textarea id="f-message" name="message" placeholder="Vaše zpráva – odkud, kam, druh a hmotnost zboží" class="box-3 padding-box" required maxlength="5000"></textarea>
 
+                            <!-- captcha -->
+                            <div class="captcha-row">
+                                <img id="captcha-img" src="captcha.php" width="170" height="56" alt="Captcha – opište znaky z obrázku">
+                                <button class="btn bold border-box bg-black clr-primary" type="button" id="captcha-refresh" aria-label="Načíst nový obrázek">↻</button>
+                            </div>
+                            <label class="sr-only" for="f-captcha">Opište znaky z obrázku</label>
+                            <input id="f-captcha" name="captcha" type="text" placeholder="Opište znaky z obrázku" class="box-2 padding-box" required maxlength="5" autocomplete="off" autocapitalize="characters" spellcheck="false">
+
                             <!-- honeypot -->
                             <div style="position:absolute;left:-9999px" aria-hidden="true">
                                 <label>Web <input type="text" name="website" tabindex="-1" autocomplete="off"></label>

@@ -3,7 +3,6 @@
     const statusEl = document.getElementById('form-status');
     if (!form || !statusEl) return;
 
-    
     const lang = (document.documentElement.lang || 'cs').slice(0, 2).toLowerCase();
 
     const MESSAGES = {
@@ -29,8 +28,8 @@
     let hideTimer;
 
     function hideStatus() {
-        statusEl.classList.remove('is-visible'); 
-        hideTimer = setTimeout(() => { 
+        statusEl.classList.remove('is-visible');
+        hideTimer = setTimeout(() => {
             statusEl.textContent = '';
             statusEl.className = 'form-status';
         }, 300);
@@ -44,14 +43,26 @@
         if (autoHideMs) hideTimer = setTimeout(hideStatus, autoHideMs);
     }
 
+    // --- Captcha ---
+    const captchaImg = document.getElementById('captcha-img');
+    const captchaInput = document.getElementById('f-captcha');
+    const captchaBtn = document.getElementById('captcha-refresh');
+
+    function reloadCaptcha() {
+        if (captchaImg) captchaImg.src = '/captcha.php?' + Date.now(); // cache-buster
+        if (captchaInput) captchaInput.value = '';
+    }
+    if (captchaBtn) captchaBtn.addEventListener('click', reloadCaptcha);
+
+    // --- Submit ---
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = form.querySelector('[type=submit]');
         btn.disabled = true;
-        setStatus(t.sending, 'loading'); 
+        setStatus(t.sending, 'loading');
         try {
             const body = new FormData(form);
-            body.append('lang', lang); 
+            body.append('lang', lang);
             const res = await fetch(form.action, {
                 method: 'POST',
                 body
@@ -63,6 +74,7 @@
             setStatus(t.connection, 'error', 10000);
         } finally {
             btn.disabled = false;
+            reloadCaptcha(); // the code is single-use, always get a new one
         }
     });
 })();
